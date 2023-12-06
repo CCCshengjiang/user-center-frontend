@@ -13,11 +13,7 @@ import * as process from "process";
  */
 const request = extend({
   credentials: 'include', // 默认请求是否带上cookie
-<<<<<<< HEAD
   prefix: process.env.NODE_ENV === 'production' ? 'https://user-backend.cwblue.cn' : undefined
-=======
-  prefix: process.env.NODE_ENV === 'production' ? 'http://user-backend.cwblue.cn' : undefined
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
 });
 
 /**

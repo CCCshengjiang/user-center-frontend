@@ -8,11 +8,7 @@ const Welcome: React.FC = () => {
       <Card>
         <Typography.Title level={2} style={{ textAlign: 'center' }}>
           <a
-<<<<<<< HEAD
             href="https://www.cwblue.top"
-=======
-            href="https://gitee.com/CCCshengjiang"
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
             rel="noopener noreferrer"
             target="__blank"
           >

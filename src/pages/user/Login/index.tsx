@@ -13,11 +13,8 @@ import {Alert, Divider, message, Space, Tabs} from 'antd';
 import React, {useState} from 'react';
 import {history, Link, useModel} from 'umi';
 import styles from './index.less';
-<<<<<<< HEAD
 import {MY_BLOG, SYSTEM_LOGO} from "@/constans";
-=======
-import {GITEE_LINK, SYSTEM_LOGO} from "@/constans";
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
+
 
 const LoginMessage: React.FC<{
   content: string;
@@ -78,11 +75,7 @@ const Login: React.FC = () => {
         <LoginForm
           logo={<img alt="logo" src={SYSTEM_LOGO}/>}
           title="wen的用户中心"
-<<<<<<< HEAD
           subTitle={<a href={MY_BLOG} target="_blank" rel="noreferrer">技术没有高低之分</a>}
-=======
-          subTitle={<a href={GITEE_LINK} target="_blank" rel="noreferrer">技术没有高低之分</a>}
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
           initialValues={{
             autoLogin: true,
           }}

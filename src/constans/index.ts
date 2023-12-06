@@ -10,10 +10,6 @@ export const GITHUB_LINK = "https://github.com/CCCshengjiang";
 /**
  * Gitee链接地址
  */
-<<<<<<< HEAD
 export const GITEE_LINK = "https://gitee.com/CCCshengjiang";
 
 export const MY_BLOG = "https://www.cwblue.top/"
-=======
-export const GITEE_LINK = "https://gitee.com/chen-shengjiang123";
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
