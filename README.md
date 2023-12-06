@@ -53,10 +53,17 @@ npm run lint:fix
 npm test
 ```
 
-## More
-
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
-=======
 # user-center-frontend
 用户中心管理系统前端
 >>>>>>> a4c5f90193b4f1a9a87324195bafea7525c29ae5
+
+本地的git仓库出了点问题，应该是我之前删文件，多删了点东西。
+
+于是我就用了rm -rf 把git仓库删了，重新init，导致版本冲突，我直接强制推送了远程。
+
+结果把我的远程提交记录全覆盖了/(ㄒoㄒ)/~~
+
+长个记性！少用强制推送！
+
+
+
