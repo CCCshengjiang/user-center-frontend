@@ -101,13 +101,8 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
   return (
     <HeaderDropdown overlay={menuHeaderDropdown}>
       <span className={`${styles.action} ${styles.account}`}>
-<<<<<<< HEAD
-        <Avatar size="small" className={styles.avatar} src={currentUser.avatarUrl === null ? "https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png" : currentUser.avatarUrl} alt="avatar" />
-        <span className={`${styles.name} anticon`}>{currentUser.username === null ? currentUser.userAccount : currentUser.username}</span>
-=======
         <Avatar size="small" className={styles.avatar} src={"https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png"} alt="avatar" />
         <span className={`${styles.name} anticon`}>{currentUser.username}</span>
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
       </span>
     </HeaderDropdown>
   );

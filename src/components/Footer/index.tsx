@@ -2,11 +2,7 @@ import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
 import {GITEE_LINK, GITHUB_LINK} from "@/constans";
 const Footer: React.FC = () => {
-<<<<<<< HEAD
   const defaultMessage = 'wen';
-=======
-  const defaultMessage = '陈文博';
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
   const currentYear = new Date().getFullYear();
   return (
     <DefaultFooter
@@ -20,11 +16,7 @@ const Footer: React.FC = () => {
         },
         {
           key: 'GitHub',
-<<<<<<< HEAD
           title: <><GithubOutlined />Github</>,
-=======
-          title: <><GithubOutlined />wen Github</>,
->>>>>>> c905fcf8b49de85ebc31a0e65dc47ac415be243a
           href: GITHUB_LINK,
           blankTarget: true,
         },
