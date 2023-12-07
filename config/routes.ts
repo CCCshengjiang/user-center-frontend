@@ -43,20 +43,8 @@ export default [
     ],
   },
   {
-    name: '查询表格',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
-  },
-  {
     path: '/',
     redirect: '/welcome',
-  },
-  {
-    name: '个人设置',
-    icon: 'smile',
-    path: '/accountsettings',
-    component: './AccountSettings',
   },
   {
     component: './404',
