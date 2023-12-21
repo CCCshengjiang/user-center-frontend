@@ -43,9 +43,15 @@ export async function register(body: API.RegisterParams, options?: { [key: strin
 }
 
 /** 搜索用户 GET /api/user/search */
-export async function searchUsers(options?: { [key: string]: any }) {
+export async function searchUsers(
+  params : API.listUserUsingGETParams,
+  options?: { [key: string]: any },
+  ) {
   return request<API.BaseResponse<API.CurrentUser[]>>('/api/user/search', {
     method: 'GET',
+    params: {
+      ...params,
+    },
     ...(options || {}),
   });
 }

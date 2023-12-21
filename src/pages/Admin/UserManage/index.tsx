@@ -22,8 +22,10 @@ const columns: ProColumns<API.CurrentUser>[] = [
     width: 48,
   },
   {
+    disable: true,
     title: '头像',
     dataIndex: 'avatarUrl',
+    hideInSearch: true,
     render: (_, record) => (
       <div>
         <Image src={record.avatarUrl} width={60}/>
@@ -46,6 +48,14 @@ const columns: ProColumns<API.CurrentUser>[] = [
   {
     title: '性别',
     dataIndex: 'gender',
+    valueEnum: {
+      0: {
+        text: '女',
+      },
+      1: {
+        text: '男',
+      },
+    }
   },
   {
     title: '电话',
@@ -99,6 +109,7 @@ const columns: ProColumns<API.CurrentUser>[] = [
     },
   },
   {
+    hideInSearch: true,
     title: '创建时间',
     dataIndex: 'createTime',
     valueType: 'dateTime'
@@ -141,7 +152,7 @@ export default () => {
       cardBordered
       request={async (params, sort, filter) => {
         console.log(sort, filter);
-        const userList = await searchUsers();
+        const userList = await searchUsers({...params});
         return {
         data: userList,
       }

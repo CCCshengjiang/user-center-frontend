@@ -78,6 +78,19 @@ declare namespace API {
     type?: string;
   };
 
+  type listUserUsingGETParams = {
+    current?: number;
+    id?: number;
+    idCode?: string;
+    username?: string;
+    userAccount?: string;
+    gender?: number;
+    phone?: string;
+    email?: string;
+    userStatus?: number;
+    userRole?: number;
+  };
+
   type ErrorResponse = {
     /** 业务约定的错误码 */
     errorCode: string;
