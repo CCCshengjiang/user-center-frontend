@@ -21,7 +21,7 @@ const UserInfo: React.FC = () => {
     username: '',
     userAccount: '',
     avatarUrl: '',
-    gender: '男',
+    gender: 0,
     phone: '',
     email: '',
     userStatus: 0,
@@ -41,8 +41,8 @@ const UserInfo: React.FC = () => {
   return (
     <>
       <Divider>用户头像</Divider>
-      <Descriptions style={{ margin: '20px auto', maxWidth: 500 }}>
-        <Descriptions.Item label="头像">
+      <Descriptions style={{ margin: '10px 325px', maxWidth: 500 }}>
+        <Descriptions.Item>
           <Image
             src={myUser.avatarUrl === null ? DEFAULT_AVATAR_URL : myUser.avatarUrl}
             width={300}
@@ -51,36 +51,54 @@ const UserInfo: React.FC = () => {
         </Descriptions.Item>
       </Descriptions>
 
-      <Divider>用户信息</Divider>
-      <Descriptions bordered column={4}>
-        <Descriptions.Item label="用户名" span={1.5}>
-          {myUser.username}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户账户" span={1.5}>
-          {myUser.userAccount}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户角色" span={1.5}>
-          {myUser.userRole === '0' ? '普通用户' : '管理员'}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户性别" span={1.5}>
-          {myUser.gender !== null ? (myUser.gender === '男' ? '男' : '女') : '未填写'}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户编号" span={1.5}>
-          {myUser.idCode}
-        </Descriptions.Item>
-        <Descriptions.Item label="创建时间" span={1.5}>
-          {new Date(myUser.createTime).toLocaleDateString()}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户状态" span={1.5}>
-          {myUser.userStatus === 0 ? '正常' : '异常'}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户电话" span={1.5}>
-          {myUser.phone === null ? '未填写' : myUser.phone}
-        </Descriptions.Item>
-        <Descriptions.Item label="用户邮箱" span={3}>
-          {myUser.email === null ? '未填写' : myUser.email}
-        </Descriptions.Item>
-      </Descriptions>
+      <>
+        <Divider>用户信息</Divider>
+        <Descriptions bordered column={4}>
+          <Descriptions.Item label="用户名" span={1.5}>
+            {myUser.username}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户账户" span={1.5}>
+            {myUser.userAccount}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户角色" span={1.5}>
+            {myUser.userRole === '0' ? '普通用户' : '管理员'}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户性别" span={1.5}>
+            {myUser.gender !== null ? (
+              myUser.gender === 0 ? (
+                '女'
+              ) : (
+                '男'
+              )
+            ) : (
+              <span style={{ color: 'rgba(0, 0, 0, 0.4)' }}>未填写</span>
+            )}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户编号" span={1.5}>
+            {myUser.idCode}
+          </Descriptions.Item>
+          <Descriptions.Item label="创建时间" span={1.5}>
+            {new Date(myUser.createTime).toLocaleDateString()}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户状态" span={1.5}>
+            {myUser.userStatus === 0 ? '正常' : '异常'}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户电话" span={1.5}>
+            {myUser.phone === null ? (
+              <span style={{ color: 'rgba(0, 0, 0, 0.4)' }}>未填写</span>
+            ) : (
+              myUser.phone
+            )}
+          </Descriptions.Item>
+          <Descriptions.Item label="用户邮箱" span={3}>
+            {myUser.email === null ? (
+              <span style={{ color: 'rgba(0, 0, 0, 0.4)' }}>未填写</span>
+            ) : (
+              myUser.email
+            )}
+          </Descriptions.Item>
+        </Descriptions>
+      </>
 
       <ModalForm<API.CurrentUser>
         title="修改本用户信息"

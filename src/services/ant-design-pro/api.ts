@@ -56,9 +56,9 @@ export async function searchUsers(
   });
 }
 
-/** 修改用户 Post /api/user/update/my */
+/** 修改用户 Post /api/user/updateUser */
 export async function userModify(body: API.CurrentUser, options?: { [key: string]: any }) {
-  return request<API.BaseResponse<boolean>>('/api/user/update/my', {
+  return request<API.BaseResponse<boolean>>('/api/user/updateUser', {
     method: 'POST',
     data: body,
     ...options,
