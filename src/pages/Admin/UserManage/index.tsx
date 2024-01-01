@@ -1,8 +1,8 @@
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable, TableDropdown } from '@ant-design/pro-components';
 import { useRef } from 'react';
-import {searchUsers} from "@/services/ant-design-pro/api";
-import {Image} from "antd";
+import { searchUsers } from '@/services/ant-design-pro/api';
+import { Image } from 'antd';
 export const waitTimePromise = async (time: number = 100) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -28,10 +28,9 @@ const columns: ProColumns<API.CurrentUser>[] = [
     hideInSearch: true,
     render: (_, record) => (
       <div>
-        <Image src={record.avatarUrl} width={60}/>
+        <Image src={record.avatarUrl} width={60} />
       </div>
-    )
-
+    ),
   },
   {
     title: '编号',
@@ -55,7 +54,7 @@ const columns: ProColumns<API.CurrentUser>[] = [
       1: {
         text: '男',
       },
-    }
+    },
   },
   {
     title: '电话',
@@ -112,7 +111,7 @@ const columns: ProColumns<API.CurrentUser>[] = [
     hideInSearch: true,
     title: '创建时间',
     dataIndex: 'createTime',
-    valueType: 'dateTime'
+    valueType: 'dateTime',
   },
   {
     title: '操作',
@@ -150,12 +149,11 @@ export default () => {
       columns={columns}
       actionRef={actionRef}
       cardBordered
-      request={async (params, sort, filter) => {
-        console.log(sort, filter);
-        const userList = await searchUsers({...params});
+      request={async (params) => {
+        const userList = await searchUsers({ ...params });
         return {
-        data: userList,
-      }
+          data: userList,
+        };
       }}
       editable={{
         type: 'multiple',

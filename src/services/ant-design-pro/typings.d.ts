@@ -13,7 +13,23 @@ declare namespace API {
     userStatus: number;
     userRole: number;
     idCode: string;
-    createTime:Date;
+    createTime: Date;
+  };
+
+  type UpdateCurrentUser = {
+    username: string;
+    avatarUrl?: string;
+    gender: number;
+    phone: string;
+    email: string;
+  };
+
+  /**
+   * 修改密码的信息模板
+   */
+  type ModifyPasswordParam = {
+    userPassword: string;
+    newPassword: string;
   };
 
   type LoginResult = {
@@ -34,7 +50,7 @@ declare namespace API {
     data: T;
     message: string;
     description: string;
-  }
+  };
 
   type RuleListItem = {
     key?: number;

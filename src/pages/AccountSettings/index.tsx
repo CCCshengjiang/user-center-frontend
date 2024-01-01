@@ -6,7 +6,7 @@ import styles from './style.less';
 
 const { Item } = Menu;
 
-type AccountSettingsStateKeys = 'base' | 'security' | 'binding' | 'notification';
+type AccountSettingsStateKeys = 'base';
 type AccountSettingsState = {
   mode: 'inline' | 'horizontal';
   selectKey: AccountSettingsStateKeys;
