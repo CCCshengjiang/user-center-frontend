@@ -135,13 +135,6 @@ const UserInfo: React.FC = () => {
             placeholder="请输入用户名"
             initialValue={myUser.username}
           />
-          <ProFormText
-            width="md"
-            name="userCode"
-            label="用户编号"
-            placeholder="请输入用户编号"
-            initialValue={myUser.idCode}
-          />
           <ProFormSelect
             name="gender"
             label="性别"
@@ -214,12 +207,14 @@ const UserInfo: React.FC = () => {
           //点击了提交
           const isModify = await modifyPassword(values);
           if (isModify) {
-            message.success('修改成功');
+            message.success('修改成功！');
             // 刷新用户信息表单
             location.reload();
             return true;
+          } else {
+            message.error('密码修改失败！');
+            return false;
           }
-          return false;
         }}
       >
         <ProForm.Group>

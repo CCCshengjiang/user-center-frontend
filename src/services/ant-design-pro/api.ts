@@ -70,7 +70,7 @@ export async function modifyPassword(
   body: API.ModifyPasswordParam,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponse<boolean>>('/api/user/update/password', {
+  return request<API.BaseResponse<boolean>>('/api/user/updatePassword', {
     method: 'POST',
     data: body,
     ...options,
