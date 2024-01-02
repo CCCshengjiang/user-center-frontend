@@ -76,3 +76,21 @@ export async function modifyPassword(
     ...options,
   });
 }
+
+/** 管理员修改用户 Post /api/user/adminUpdateUser */
+export async function adminUpdateUser(body: API.CurrentUser, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<boolean>>('/api/user/adminUpdateUser', {
+    method: 'POST',
+    data: body,
+    ...options,
+  });
+}
+
+/** 删除用户 POST /api/user/delete */
+export async function deleteUser(body: API.DeleteParam, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<boolean>>('/api/user/delete', {
+    method: 'POST',
+    data: body,
+    ...options,
+  });
+}

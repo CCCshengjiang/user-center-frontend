@@ -13,7 +13,15 @@ declare namespace API {
     userStatus: number;
     userRole: number;
     idCode: string;
+    isDelete: number;
     createTime: Date;
+  };
+
+  /**
+   * 删除的参数
+   */
+  type DeleteParam = {
+    id: number;
   };
 
   type UpdateCurrentUser = {

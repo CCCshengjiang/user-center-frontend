@@ -13,53 +13,70 @@ export const GITHUB_LINK = 'https://github.com/CCCshengjiang';
  */
 export const GITEE_LINK = 'https://gitee.com/CCCshengjiang';
 
+export const selectUserStatus = [
+  { value: 0, label: '正常' },
+  { value: 1, label: '注销' },
+];
+
+export const selectUserRole = [
+  { value: 0, label: '普通用户' },
+  { value: 1, label: '管理员' },
+];
+
+export const selectGender = [
+  { value: 1, label: '男' },
+  { value: 0, label: '女' },
+];
+
 export const MY_BLOG = 'https://www.cwblue.top/';
 
 export const DEFAULT_AVATAR_URL =
   'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png';
 
 export const selectAvatarUrl = [
-  { value: 'http://picgo.kongshier.top/typoraImages/48.jpeg', label: '美女' },
+  {
+    value: 'https://pic1.zhimg.com/80/v2-c8586e136574ebcbdc8ac5464cb36ff4_720w.webp',
+    label: '蜡笔小新-1',
+  },
+  {
+    value:
+      'https://img2.baidu.com/it/u=1038288991,3510306313&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    label: '蜡笔小新-2',
+  },
+  {
+    value:
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F9285b5de-fe65-4f0c-ae08-79af6f5d8b76%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1706695127&t=82c8494bd026a6f70fea2932b7ed2205',
+    label: '蜡笔小新-3',
+  },
+  {
+    value:
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fb1ce8e21-7a32-4d36-a3cb-3d646c23ea84%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1706695145&t=c94c5e42d72f170728c1c4c04d8e9e06',
+    label: '蜡笔小新-4',
+  },
+  {
+    value:
+      'https://img1.baidu.com/it/u=3801984060,1317462208&fm=253&fmt=auto&app=138&f=JPG?w=500&h=667',
+    label: '蜡笔小新-5',
+  },
+  {
+    value:
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Ff4b76668-77bc-4a18-b0e0-2c8813e44c75%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1706695204&t=8d7d55ea50897efeb20faa1435af2243',
+    label: '粉色可爱头像',
+  },
+  {
+    value:
+      'https://img2.baidu.com/it/u=1297740018,2772695612&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    label: '蓝色可爱头像',
+  },
+  {
+    value:
+      'https://pic1.zhimg.com/80/v2-b867327f97275e871e5dd6f46c57bfb1_720w.webp?source=2c26e567',
+    label: '女孩捧花',
+  },
+  {
+    value: 'https://pic1.zhimg.com/80/v2-c49db4f175294b77f7d6062fe34d6a40_720w.webp',
+    label: '动漫古风女孩',
+  },
   { value: 'http://picgo.kongshier.top/typoraImages/HeadPortrait.jpg', label: '猫咪' },
   { value: 'http://picgo.kongshier.top/typoraImages/cats.jpg', label: '功夫猫咪' },
-  {
-    value:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8f11d5f659e4babad1be4aab185acb6~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐1号',
-  },
-  {
-    value:
-      'https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/33d8f1d47ed24eb4b5f6e80f0300f20b~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '御姐1号',
-  },
-  {
-    value:
-      'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8b809c804414e2d86677b1952092d52~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐2号',
-  },
-  {
-    value:
-      'https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e020ad610d3241b69a7cb492a210df03~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐3号',
-  },
-  {
-    value:
-      'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f4b4b8ff4a84406bfe18f6a27a3e3f8~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐4号',
-  },
-  {
-    value:
-      'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14e4ebc30a124d7ca30c41d6e8fd0497~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐5号',
-  },
-  {
-    value:
-      'https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d210d1b4c3434e72b2e9711dedcb6cfa~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐6号',
-  },
-  {
-    value:
-      'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5371651be7c74109a685d3d801f73f52~tplv-k3u1fbpfcp-zoom-crop-mark:1512:1512:1512:851.awebp?',
-    label: '小姐姐7号',
-  },
 ];

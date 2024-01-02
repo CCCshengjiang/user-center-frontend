@@ -25,18 +25,36 @@ const UserInfo: React.FC = () => {
     phone: '',
     email: '',
     userStatus: 0,
-    userRole: 'user',
+    userRole: 0,
     createTime: '',
-    idCode: -1,
+    idCode: 0,
   });
   useEffect(() => {
+    // 本地开发这样写
     async function fetch() {
       await request('/api/user/current', { method: 'GET' }).then((res) => {
         setMyUser(res);
       });
     }
 
-    fetch();
+    /*    //部署上线这样写
+    async function fetch() {
+      await request('https://user-backend.cwblue.cn/api/user/current', {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+          'Referer': 'https://user-backend.cwblue.cn/',
+        },
+      }).then((res) => {
+        setMyUser(res);
+      });
+    }*/
+
+    fetch().then((result) => {
+      // 处理请求结果
+      console.log(result);
+    });
   }, []);
   return (
     <>
@@ -61,7 +79,7 @@ const UserInfo: React.FC = () => {
             {myUser.userAccount}
           </Descriptions.Item>
           <Descriptions.Item label="用户角色" span={1.5}>
-            {myUser.userRole === '0' ? '普通用户' : '管理员'}
+            {myUser.userRole === 0 ? '普通用户' : '管理员'}
           </Descriptions.Item>
           <Descriptions.Item label="用户性别" span={1.5}>
             {myUser.gender !== null ? (
